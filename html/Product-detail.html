@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Product-detail</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+
+        $(document).ready(function () {
+            mota = localStorage.getItem("mota");
+            ten = localStorage.getItem("Ten");
+            hinh = localStorage.getItem("Hinh");
+            gia  = localStorage.getItem("gia");
+            id = localStorage.getItem("id");
+            document.getElementById("ten").innerHTML += ten;
+            document.getElementById("hinh").src = hinh
+            document.getElementById("mota").innerHTML += mota;
+            document.getElementById("gia").innerHTML += gia ;
+        });
+
+    </script>
 </head>
 
 <body>
-<<<<<<< HEAD
-    <div class="container-fluid max_width">
-=======
     <div class="page">
->>>>>>> 0e5e69307afe8788fa6fa94c28b5e1817f17d70a
         <header>
             <a href="home.html">
                 <h1 class="logo">LoGo</h1>
@@ -26,12 +37,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="home.html">Home</a></li>
-<<<<<<< HEAD
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Blog</a></li>
-=======
                     <li><a href="Product.html">Product</a></li>
->>>>>>> 0e5e69307afe8788fa6fa94c28b5e1817f17d70a
                     <li><a href="#">Member</a></li>
                     <li><a href="#">Register</a></li>
                 </ul>
@@ -62,55 +68,20 @@
                     </div>
                 </div>
         </header>
-        <section class="home">
-            <div class="slider">
-                <div class="slide">
-                    <img src="../img/slider1.jpg" alt="Ảnh slide 1">
-                </div>
-                <div class="slide">
-                    <img src="../img/slider2.jpg" alt="Ảnh slide 2">
-                </div>
-                <div class="slide">
-                    <img src="../img/parallax.jpg" alt="Ảnh slide 3">
-                </div>
-            </div>
-            <button id="prev" class="btnl"onclick="prev()"><i class="fa fa-angle-left" aria-hidden="true" ></i></button>
-            <button id="next" class="btnr"onclick="next()"><i class="fa fa-angle-right" aria-hidden="true" ></i></button>
-            <h4>WELCOME TO THE STORE</h4>
-        </section>
-        <section class="banner">
-            <h4>Deal of the day</h4>
-            <div class="lbanner">
-                <div class="box">
-                    <a href="#"><img src="../img/banh1.png" alt=""></a>
-                    <div class="content">
-                        <h5>Banh 1</h5>
-                        <p>$36</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <a href="#"><img src="../img/banh2.png" alt=""></a>
-                    <div class="content">
-                        <h5>Banh 2</h5>
-                        <p>$36</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <a href="#"><img src="../img/banh3.png" alt=""></a>
-                    <div class="content">
-                        <h5>Banh 3</h5>
-                        <p>$15</p>
-                    </div>
-                </div>
+        <section class="product-detail">
+            <img src="" id="hinh">
+            <div class="content">
+                <h1 id="ten"></h1>
+                <h3 id="gia"></h3>
+                <p id="mota"></p>
+                <button class="addBanh">Add to cart</button>
             </div>
         </section>
         <footer>
             footer
         </footer>
     </div>
-    <script src="../js/script.js">
-    </script>
-    <script>showSlide(0)</script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
