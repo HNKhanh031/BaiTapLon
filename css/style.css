@@ -4,6 +4,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.max_width {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 header {
     position: relative;
 }
@@ -88,13 +93,14 @@ section.home .slide img {
 }
 
 section.home button {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 100%;
     background-color: white;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 5px;
-    border: 2px solid black;
+    /* border-radius: 5px; */
+    /* border: 2px solid black; */
+    opacity: .2;
     outline: none;
 }
 
@@ -106,14 +112,14 @@ section.home button:hover {
 
 section.home .btnl {
     position: absolute;
-    bottom: 10px;
-    right: 110px;
+    bottom: 0;
+    left: 0;
 }
 
 section.home .btnr {
     position: absolute;
-    bottom: 10px;
-    right: 50px;
+    bottom: 0;
+    right: 0;
 }
 section.home h4{
     position: absolute;
