@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container-fluid max_width">
+        <header>
+            <a href="home.html">
+                <h1 class="logo">LoGo</h1>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="#">Member</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+            <div class="icon">
+                <button type="button" onclick="downSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button type="button" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-user" aria-hidden="true"></i></button>
+                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </div>
+            <div class="form-search" id="form-search">
+                <input type="text" id="txt-search" placeholder="Search here...">
+                <button type="button" id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">USER LOGIN</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="Enter your email">
+                            <input type="password" class="form-control" placeholder="Enter your password">
+                        </form>
+                    </div>
+                </div>
+        </header>
+        <section class="home">
+            <div class="slider">
+                <div class="slide">
+                    <img src="../img/slider1.jpg" alt="Ảnh slide 1">
+                </div>
+                <div class="slide">
+                    <img src="../img/slider2.jpg" alt="Ảnh slide 2">
+                </div>
+                <div class="slide">
+                    <img src="../img/parallax.jpg" alt="Ảnh slide 3">
+                </div>
+            </div>
+            <button id="prev" class="btnl" onclick="prev()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            <button id="next" class="btnr" onclick="next()"><i class="fa fa-angle-right"
+                    aria-hidden="true"></i></button>
+            <h4>WELCOME TO THE STORE</h4>
+        </section>
+        <section class="banner">
+            <h4>Deal of the day</h4>
+            <div class="lbanner">
+                <div class="box">
+                    <a href="#"><img src="../img/banh1.png" alt=""></a>
+                    <div class="content">
+                        <h5>Banh 1</h5>
+                        <p>$36</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <a href="#"><img src="../img/banh2.png" alt=""></a>
+                    <div class="content">
+                        <h5>Banh 2</h5>
+                        <p>$36</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <a href="#"><img src="../img/banh3.png" alt=""></a>
+                    <div class="content">
+                        <h5>Banh 3</h5>
+                        <p>$15</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            footer
+        </footer>
+    </div>
+    <script src="../js/script.js">
+    </script>
+    <script>showSlide(0)</script>
+</body>
+
+</html>
