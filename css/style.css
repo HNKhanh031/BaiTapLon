@@ -17,9 +17,16 @@ header {
 
 header .logo {
     position: absolute;
-    left: 100px;
+    left: 20px;
     top: 0;
-    color: black;
+}
+
+header img {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 50px;
+    width: auto;
 }
 
 header nav ul {
@@ -196,10 +203,90 @@ section.banner .lbanner img:hover {
     transform: scale(1.1);
 }
 
+.intro {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.intro h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.intro p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.intro button {
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.intro button:hover {
+    background-color: #e40046;
+}
+
+.intro img {
+    width: 100%;
+}
+
+
 footer {
+    background-color: #f8f8f8;
     height: 50px;
     border-top: 1px solid black;
     margin-top: 20px;
+}
+
+footer h3 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer p {
+    line-height: 1.5;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li i {
+    margin-right: 10px;
+}
+
+footer ul.social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer ul.social li a {
+    color: #666;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer ul.social li a:hover {
+    color: #333;
+    transform: scale(1.2);
 }
 
 section.banner-product {

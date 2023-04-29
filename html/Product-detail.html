@@ -17,12 +17,12 @@
             mota = localStorage.getItem("mota");
             ten = localStorage.getItem("Ten");
             hinh = localStorage.getItem("Hinh");
-            gia  = localStorage.getItem("gia");
+            gia = localStorage.getItem("gia");
             id = localStorage.getItem("id");
             document.getElementById("ten").innerHTML += ten;
             document.getElementById("hinh").src = hinh
             document.getElementById("mota").innerHTML += mota;
-            document.getElementById("gia").innerHTML += gia ;
+            document.getElementById("gia").innerHTML += gia;
         });
 
     </script>
@@ -31,8 +31,8 @@
 <body>
     <div class="page">
         <header>
-            <a href="home.html">
-                <h1 class="logo">LoGo</h1>
+            <a href="home.html" class="logo">
+                <img src="../img/logo.png" alt="Website Logo">
             </a>
             <nav class="navbar">
                 <ul>
@@ -78,7 +78,31 @@
             </div>
         </section>
         <footer>
-            footer
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>About Us</h3>
+                        <p>This is a website made for learning purposes</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i class="fa fa-envelope"></i> iuh@gmail.com</li>
+                            <li><i class="fa fa-phone"></i> 0987654321</li>
+                            <li><i class="fa fa-map-marker"></i> 123 Main Street</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Follow Us</h3>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
     <script src="../js/script.js"></script>
