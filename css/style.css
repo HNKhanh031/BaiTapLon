@@ -121,11 +121,11 @@ section.home {
     height: 500px;
 }
 
-section.home .slide {
+.slide {
     display: none;
 }
 
-section.home .slide.active {
+.slide.active {
     display: block;
 }
 
@@ -140,8 +140,8 @@ section.home button {
     background-color: white;
     font-size: 20px;
     font-weight: bold;
-    /* border-radius: 5px; */
-    /* border: 2px solid black; */
+    border-radius: 5px;
+    border: 2px solid black;
     opacity: .2;
     outline: none;
 }
@@ -188,6 +188,8 @@ section.banner .lbanner .box {
     margin-top: 30px;
     width: auto;
     display: flex;
+    text-decoration: none;
+    color: black;
 }
 
 section.banner .lbanner img {
@@ -196,10 +198,15 @@ section.banner .lbanner img {
 }
 
 section.banner .lbanner .content {
+    margin-left: 20px;
     text-align: left;
 }
 
-section.banner .lbanner img:hover {
+section.banner .lbanner a:hover {
+    text-decoration: none;
+}
+
+section.banner .lbanner .box:hover img {
     transform: scale(1.1);
 }
 
@@ -369,17 +376,13 @@ section.product-detail {
     height: 500px;
 }
 
-section.product-detail img {
-    margin: auto;
-    width: 300px;
-}
-
 section.product-detail .content {
+    position: relative;
     width: 500px;
-    margin-right: 300px;
+    margin-left: 100px;
 }
 
-section.product-detail .content button {
+section.product-detail .content button.addbanh {
     margin-top: 150px;
     width: 200px;
     height: 50px;
@@ -387,10 +390,86 @@ section.product-detail .content button {
     background-color: rgb(182, 182, 56);
 }
 
-section.product-detail .content button:hover {
+section.product-detail .content button.addbanh:hover {
     background-color: rgb(144, 144, 45);
 }
 
+section.product-detail .slider {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+section.product-detail .slider .slide img {
+    width: 300px;
+    height: 300px;
+}
+
+section.product-detail button.btnl,
+.btnr {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+section.product-detail .btnl {
+    position: absolute;
+    bottom: -30px;
+    right: 60px;
+}
+
+section.product-detail .btnr {
+    position: absolute;
+    bottom: -30px;
+    right: 5px;
+}
+
+section.product-detail .content .qtt {
+    position: relative;
+    position: absolute;
+    top: 250px;
+}
+
+section.product-detail .content button.plus {
+    position: absolute;
+    left: 60px;
+}
+
+section.product-detail .content p#quantity {
+    position: absolute;
+    left: 40px;
+}
+
+section.product-detail button.plus,
+.minus {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(182, 182, 56);
+    color: white;
+    border: 0;
+}
+
+section.product-detail .content button.plus:hover,
+.minus:hover {
+    background-color: rgb(144, 144, 45);
+}
+
+section.shoppingcart {
+    min-height: 600px;
+}
+
+section.shoppingcart .tblcart img {
+    width: 100px;
+    height: 100px;
+}
+
+section.shoppingcart .total_bill {
+    text-align: end;
+    margin-right: 50px;
+}
 section.banner-register {
     background-image: url('../img/product-bn.jpg');
     height: 250px;

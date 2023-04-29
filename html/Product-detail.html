@@ -12,32 +12,32 @@
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
-
         $(document).ready(function () {
-            mota = localStorage.getItem("mota");
-            ten = localStorage.getItem("Ten");
-            hinh = localStorage.getItem("Hinh");
-            gia = localStorage.getItem("gia");
-            id = localStorage.getItem("id");
-            document.getElementById("ten").innerHTML += ten;
-            document.getElementById("hinh").src = hinh
-            document.getElementById("mota").innerHTML += mota;
-            document.getElementById("gia").innerHTML += gia;
+            listbanh = JSON.parse(sessionStorage.getItem('listbanh'));
+            banh = listbanh.find(banh => banh.id == sessionStorage.getItem("id"))
+            document.getElementById("ten").innerHTML += banh.ten;
+            banh.hinh.forEach(Element => {
+                let b = "<div class='slide'><img src='" + Element + "' ></div>"
+                $(".slider").append(b);
+            });
+            document.getElementById("mota").innerHTML += banh.mota;
+            document.getElementById("gia").innerHTML += "$" + banh.gia;
+            showSlide(0);
         });
-
     </script>
 </head>
 
 <body>
-    <div class="page">
+    <div class="container-fluid max_width">
         <header>
-            <a href="home.html" class="logo">
-                <img src="../img/logo.png" alt="Website Logo">
+                <a href="home.html" class="logo">
+                    <img src="../img/logo.png" alt="Website Logo">
             </a>
             <nav class="navbar">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="Product.html">Product</a></li>
+                    <li><a href="#">Blog</a></li>
                     <li><a href="#">Member</a></li>
                     <li><a href="#">Register</a></li>
                 </ul>
@@ -46,7 +46,7 @@
                 <button type="button" onclick="downSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
                 <button type="button" data-toggle="modal" data-target="#myModal">
                     <i class="fa fa-user" aria-hidden="true"></i></button>
-                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
             </div>
             <div class="form-search" id="form-search">
                 <input type="text" id="txt-search" placeholder="Search here...">
@@ -68,14 +68,25 @@
                     </div>
                 </div>
         </header>
-        <section class="product-detail">
-            <img src="" id="hinh">
+        <section class="product-detail container">
+            <div class="slider">
+                <button id="prev" class="btnl" onclick="prev()"><i class="fa fa-angle-left"
+                        aria-hidden="true"></i></button>
+                <button id="next" class="btnr" onclick="next()"><i class="fa fa-angle-right"
+                        aria-hidden="true"></i></button>
+            </div>
             <div class="content">
                 <h1 id="ten"></h1>
                 <h3 id="gia"></h3>
                 <p id="mota"></p>
-                <button class="addBanh">Add to cart</button>
+                <div class="qtt">
+                    <button class="plus" onclick="plus()">+</button>
+                    <p id="quantity">1</p>
+                    <button class="minus" onclick="minus()">-</button>
+                </div>
+                <button class="addbanh" onclick="themsl(sessionStorage.getItem('id'))">Add to cart</button>
             </div>
+
         </section>
         <footer>
             <div class="container">

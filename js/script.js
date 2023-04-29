@@ -1,7 +1,67 @@
-var slides = document.querySelectorAll('.slider .slide');
 var currentSlide = 0;
+var listbanh = [
+    banh1 = {
+        id: 1,
+        ten: "Banana Pudding Cookies",
+        hinh: ["../img/Banana Pudding Cookies_1.jpg", "../img/Banana Pudding Cookies_2.jpg"],
+        mota: "Mô tả....",
+        gia: 25
+    },
+    banh2 = {
+        id: 2,
+        ten: "Birthday Cupcakes",
+        hinh: ["../img/Birthday Cupcakes_1.jpg", "../img/Birthday Cupcakes_2.jpg", "../img/Birthday Cupcakes_3.jpg"],
+        mota: "Mô tả....",
+        gia: 30
+    },
+    banh3 = {
+        id: 3,
+        ten: "Chocolate Cake",
+        hinh: ["../img/Chocolate Cake_1.jpg", "../img/Chocolate Cake_2.jpg", "../img/Chocolate Cake_3.jpg"],
+        mota: "Mô tả....",
+        gia: 25
+    },
+    banh4 = {
+        id: 4,
+        ten: "Chocolate Chunk Cookies",
+        hinh: ["../img/Chocolate Chunk Cookies_1.jpg", "../img/Chocolate Chunk Cookies_2.jpg", "../img/Chocolate Chunk Cookies_3.jpg", "../img/Chocolate Chunk Cookies_4.jpg"],
+        mota: "Mô tả....",
+        gia: 30
+    },
+    banh5 = {
+        id: 5,
+        ten: "Chocolate Pudding Icebox Pie",
+        hinh: ["../img/Chocolate Pudding Icebox Pie_1.jpg", "../img/Chocolate Pudding Icebox Pie_2.jpg", "../img/Chocolate Pudding Icebox Pie_3.jpg"],
+        mota: "Mô tả....",
+        gia: 40
+    },
+    banh6 = {
+        id: 6,
+        ten: "Confetti Cake",
+        hinh: ["../img/Confetti Cake_1.png", "../img/Confetti Cake_2.png", "../img/Confetti Cake_3.jpg"],
+        mota: "Mô tả....",
+        gia: 30
+    },
+    banh7 = {
+        id: 7,
+        ten: "Pastel Party Cake",
+        hinh: ["../img/Pastel Party Cake_1.jpg", "../img/Pastel Party Cake_2.jpg", "../img/Pastel Party Cake_3.jpg"],
+        mota: "Mô tả....",
+        gia: 50
+    },
+    banh8 = {
+        id: 8,
+        ten: "Red Velvet Cupcakes",
+        hinh: ["../img/Red Velvet Cupcakes_1.jpg", "../img/Red Velvet Cupcakes_2.jpg"],
+        mota: "Mô tả....",
+        gia: 30
+    }
+];
+sessionStorage.setItem("listbanh", JSON.stringify(listbanh))
+
 
 function showSlide(n) {
+    var slides = document.querySelectorAll('.slide');
     if (n < 0) {
         n = slides.length - 1;
     } else if (n >= slides.length) {
@@ -31,72 +91,25 @@ function downSearch() {
     else {
         dropdown.style.maxHeight = "50px";
     }
-
 }
-var listBanh = [
-    banh1 = {
-        id: 1,
-        ten: "Banh 1",
-        hinh: "../img/banh1.png",
-        mota: "Mô tả....",
-        gia: "$123"
-    },
-    banh2 = {
-        id: 2,
-        ten: "Banh 2",
-        hinh: "../img/banh1.png",
-        mota: "Mô tả....",
-        gia: "$20"
-    },
-    banh3 = {
-        id: 3,
-        ten: "Banh 3",
-        hinh: "../img/product-6.jpg",
-        mota: "Mô tả....",
-        gia: "$111"
-    },
-    banh4 = {
-        id: 4,
-        ten: "Banh 4",
-        hinh: "../img/banh3.png",
-        mota: "Mô tả....",
-        gia: "$30"
-    },
-    banh5 = {
-        id: 5,
-        ten: "Banh 5",
-        hinh: "../img/product-1.jpg",
-        mota: "Mô tả....",
-        gia: "$100"
-    },
-    banh6 = {
-        id: 6,
-        ten: "Banh 6",
-        hinh: "../img/product-2.jpg",
-        mota: "Mô tả....",
-        gia: "$12"
-    },
-    banh7 = {
-        id: 7,
-        ten: "Banh 7",
-        hinh: "../img/product-3.jpg",
-        mota: "Mô tả....",
-        gia: "$50"
-    },
-    banh8 = {
-        id: 8,
-        ten: "Banh 8",
-        hinh: "../img/product-4.jpg",
-        mota: "Mô tả....",
-        gia: "$30"
+function hienthi(id) {
+    sessionStorage.setItem('id', id);
+}
+function plus() {
+    n = document.getElementById("quantity")
+    n.innerText = parseInt((n.innerText)) + 1
+}
+function minus() {
+    n = document.getElementById("quantity")
+    if (parseInt((n.innerText)) > 1)
+        n.innerText = parseInt((n.innerText)) - 1
+}
+function themsl(id) {
+    cart = {
+        id: id,
+        sl: document.getElementById("quantity").innerText
     }
-];
-function hienthi(ma) {
-    let banh = listBanh.find(banh => banh.id === ma)
-    localStorage.setItem("Ten", banh.ten);
-    localStorage.setItem("Hinh", banh.hinh);
-    localStorage.setItem("mota", banh.mota);
-    localStorage.setItem("gia", banh.gia);
+    sessionStorage.setItem(id, JSON.stringify(cart))
 }
 
 function checkTenDN() {
