@@ -4,56 +4,56 @@ var listbanh = [
         id: 1,
         ten: "Banana Pudding Cookies",
         hinh: ["../img/Banana Pudding Cookies_1.jpg", "../img/Banana Pudding Cookies_2.jpg"],
-        mota: "Mô tả....",
+        mota: "Banana pudding cookies are chewy cookies with a subtle banana flavor and creamy texture. They're made with butter, brown sugar, eggs, flour, baking powder, mashed bananas, and vanilla pudding mix.",
         gia: 25
     },
     banh2 = {
         id: 2,
         ten: "Birthday Cupcakes",
         hinh: ["../img/Birthday Cupcakes_1.jpg", "../img/Birthday Cupcakes_2.jpg", "../img/Birthday Cupcakes_3.jpg"],
-        mota: "Mô tả....",
+        mota: "A birthday cupcake is a small cake served for one person on their birthday. They're baked in small liners, flavored with ingredients like vanilla or chocolate, and topped with frosting and decorations.",
         gia: 30
     },
     banh3 = {
         id: 3,
         ten: "Chocolate Cake",
         hinh: ["../img/Chocolate Cake_1.jpg", "../img/Chocolate Cake_2.jpg", "../img/Chocolate Cake_3.jpg"],
-        mota: "Mô tả....",
+        mota: "Chocolate cake is a dessert made with chocolate, typically with ingredients such as flour, sugar, eggs, cocoa powder, and baking soda or baking powder. It can be enhanced with additional chocolate and layered with frosting such as buttercream.",
         gia: 25
     },
     banh4 = {
         id: 4,
         ten: "Chocolate Chunk Cookies",
         hinh: ["../img/Chocolate Chunk Cookies_1.jpg", "../img/Chocolate Chunk Cookies_2.jpg", "../img/Chocolate Chunk Cookies_3.jpg", "../img/Chocolate Chunk Cookies_4.jpg"],
-        mota: "Mô tả....",
+        mota: "Chocolate chunk cookies are a type of cookie with chunks of chocolate in the dough. They're made with ingredients like butter, sugar, eggs, flour, baking soda, vanilla extract, and chopped chocolate. The dough is portioned into balls and baked until golden brown, resulting in crispy cookies with a soft, chewy interior.",
         gia: 30
     },
     banh5 = {
         id: 5,
         ten: "Chocolate Pudding Icebox Pie",
         hinh: ["../img/Chocolate Pudding Icebox Pie_1.jpg", "../img/Chocolate Pudding Icebox Pie_2.jpg", "../img/Chocolate Pudding Icebox Pie_3.jpg"],
-        mota: "Mô tả....",
+        mota: "Chocolate pudding icebox pie is a no-bake dessert with a chocolate cookie crust and a filling made of chocolate pudding and whipped cream. The crust is made with crushed cookies and butter, and the filling is made with instant pudding mix and whipped cream. It's chilled until set and can be topped with various toppings.",
         gia: 40
     },
     banh6 = {
         id: 6,
         ten: "Confetti Cake",
         hinh: ["../img/Confetti Cake_1.png", "../img/Confetti Cake_2.png", "../img/Confetti Cake_3.jpg"],
-        mota: "Mô tả....",
+        mota: "Confetti cake is a type of cake that is made with a white or yellow cake batter that has colorful sprinkles mixed into the batter. The sprinkles create a fun and festive look, resembling confetti. The cake is typically baked in layers and frosted with a vanilla buttercream frosting.",
         gia: 30
     },
     banh7 = {
         id: 7,
         ten: "Pastel Party Cake",
         hinh: ["../img/Pastel Party Cake_1.jpg", "../img/Pastel Party Cake_2.jpg", "../img/Pastel Party Cake_3.jpg"],
-        mota: "Mô tả....",
+        mota: "A pastel party cake is a cake decorated with light-colored frosting in shades of pink, blue, green, or yellow. It's often served at parties, such as baby showers or springtime gatherings. The cake can be made in different flavors and sizes, and the frosting is typically made with butter, powdered sugar, and food coloring.",
         gia: 50
     },
     banh8 = {
         id: 8,
         ten: "Red Velvet Cupcakes",
         hinh: ["../img/Red Velvet Cupcakes_1.jpg", "../img/Red Velvet Cupcakes_2.jpg"],
-        mota: "Mô tả....",
+        mota: "Red velvet cupcakes are cupcakes with a cocoa-based batter colored with red food coloring. They're typically topped with cream cheese frosting and can be decorated with red velvet cake crumbs or sprinkles.",
         gia: 30
     }
 ];
@@ -233,6 +233,23 @@ function checkEmail() {
 
 function Dangky() {
     if (checkTenDN() && checkMatKhau() && checkMatKhauRe() && checkHoTen() && checkNgaySinh() && checkSDT() && checkEmail()) {
-        alert("Đăng ký thành công");
+        alert("Register successful");
+    }
+}
+
+function checkContact() {
+    let con = document.getElementById("content").value;
+    if (con == "") {
+        document.getElementById("ercontact").innerHTML = "Contents must not be empty";
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+function Lienhe() {
+    if (checkHoTen() && checkSDT() && checkEmail() && checkContact()) {
+        alert("Send successful");
     }
 }

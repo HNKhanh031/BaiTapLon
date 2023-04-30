@@ -470,8 +470,3 @@ section.shoppingcart .total_bill {
     text-align: end;
     margin-right: 50px;
 }
-section.banner-register {
-    background-image: url('../img/product-bn.jpg');
-    height: 250px;
-    width: 100%;
-}
