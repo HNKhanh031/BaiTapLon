@@ -233,7 +233,24 @@ function checkEmail() {
 
 function Dangky() {
     if (checkTenDN() && checkMatKhau() && checkMatKhauRe() && checkHoTen() && checkNgaySinh() && checkSDT() && checkEmail()) {
-        alert("Register successful");
+        let tenDN = document.getElementById("username").value;
+        let mk = document.getElementById("password").value;
+        localStorage.setItem('username', tenDN);
+        localStorage.setItem('password', mk);
+        alert("Register successful. Username: " + tenDN + " Password: " + mk);
+    }
+}
+
+function Dangnhap() {
+    let tenDN = document.getElementById("usernameDN").value;
+    let mk = document.getElementById("passwordDN").value;
+    let storedUsername = localStorage.getItem('username');
+    let storedPassword = localStorage.getItem('password');
+    if (tenDN === storedUsername && mk === storedPassword) {
+        alert("Login successful");
+        $("#myModal").modal("hide");
+    } else {
+        alert("Invalid username or password");
     }
 }
 
