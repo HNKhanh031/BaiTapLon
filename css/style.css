@@ -383,7 +383,7 @@ section.product-detail .content {
 }
 
 section.product-detail .content button.addbanh {
-    margin-top: 150px;
+    margin-left: 150px;
     width: 200px;
     height: 50px;
     border-radius: 30px;
@@ -425,11 +425,15 @@ section.product-detail .btnr {
     bottom: -30px;
     right: 5px;
 }
-
+section.product-detail .content .btn_qtt{
+    position: relative;
+    margin-top: 50px;
+}
 section.product-detail .content .qtt {
     position: relative;
     position: absolute;
-    top: 250px;
+    top: 10px;
+    left: 10px;
 }
 
 section.product-detail .content button.plus {

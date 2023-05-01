@@ -86,12 +86,14 @@
                 <h1 id="ten"></h1>
                 <h3 id="gia"></h3>
                 <p id="mota"></p>
-                <div class="qtt">
-                    <button class="plus" onclick="plus()">+</button>
-                    <p id="quantity">1</p>
-                    <button class="minus" onclick="minus()">-</button>
+                <div class="btn_qtt">
+                    <div class="qtt">
+                        <button class="plus" onclick="plus()">+</button>
+                        <p id="quantity">1</p>
+                        <button class="minus" onclick="minus()">-</button>
+                    </div>
+                    <button class="addbanh" onclick="themsl(sessionStorage.getItem('id'))">Add to cart</button>
                 </div>
-                <button class="addbanh" onclick="themsl(sessionStorage.getItem('id'))">Add to cart</button>
             </div>
 
         </section>
