@@ -18,13 +18,13 @@
             for (i = 1; i <= 8; i++) {
                 cart = JSON.parse(sessionStorage.getItem(i))
                 if (cart !== null) {
-                    let banh = listbanh[cart.id - 1]
-                    text = "<tr><td><img src='" + banh.hinh[0] + "'></td><td>" + banh.ten + "</td><td>" + cart.sl + "</td><td>" + "$" + banh.gia + "</td><td>" + "$" + cart.sl * banh.gia + "</td></tr>"
+                    banh = listbanh[cart.id - 1]
+                    text = "<tr id ='"+i+"'><td><img src='" + banh.hinh[0] + "'></td><td>" + banh.ten + "</td><td style='position: relative;'> <div class='qtt'><button class='plus' onclick='update_price(" + i + ",1)'>+</button><p id='quantity" + i + "'>" + cart.sl + "</p><button class='minus' onclick='update_price(" + i + ",-1)'>-</button></div></td><td>" + "$" + banh.gia + "</td><td style='position: relative;'><div id='total_price" + i + "'>" + "$" + cart.sl * banh.gia + "</div><button type='button' class='close' id='remove_product"+i+"' onclick='remove_product("+i+")'>&times;</button></td></tr>"
                     document.getElementById("tblcart").innerHTML += text
                     total_bill += parseInt(cart.sl) * parseInt(banh.gia)
                 }
             }
-            document.getElementById("shoppingcart").innerHTML += "<div class='total_bill'>" + "total bill: $" + total_bill + "</div>"
+            document.getElementById("shoppingcart").innerHTML += "<div class='total_bill' id = 'total_bill'>" + "total bill: $" + total_bill + "</div>"
         });
     </script>
 </head>

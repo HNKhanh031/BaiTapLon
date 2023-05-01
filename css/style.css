@@ -287,12 +287,12 @@ footer ul.social li {
 
 footer ul.social li a {
     color: #666;
-    font-size: 18px;
+    font-size: 25px;
     transition: all 0.3s ease-in-out;
 }
 
 footer ul.social li a:hover {
-    color: #333;
+    color: rgb(130, 130, 57);
     transform: scale(1.2);
 }
 
@@ -442,7 +442,7 @@ section.product-detail .content p#quantity {
     left: 40px;
 }
 
-section.product-detail button.plus,
+button.plus,
 .minus {
     width: 25px;
     height: 25px;
@@ -452,7 +452,7 @@ section.product-detail button.plus,
     border: 0;
 }
 
-section.product-detail .content button.plus:hover,
+button.plus:hover,
 .minus:hover {
     background-color: rgb(144, 144, 45);
 }
@@ -469,4 +469,25 @@ section.shoppingcart .tblcart img {
 section.shoppingcart .total_bill {
     text-align: end;
     margin-right: 50px;
+}
+section.shoppingcart .qtt  p{
+    position: absolute;
+    left: 45px;
+    top : 10px;
+}
+section.shoppingcart .qtt  .plus{
+    position: absolute;
+    left: 70px;
+    top: 10px;
+}
+section.shoppingcart .qtt  .minus{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+section.shoppingcart button.close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: red;
 }

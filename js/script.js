@@ -270,3 +270,38 @@ function Lienhe() {
         alert("Send successful");
     }
 }
+function update_price(id, n) {
+    listbanh = JSON.parse(sessionStorage.getItem('listbanh'));
+    banh = listbanh[id - 1]
+    qtt = document.getElementById("quantity" + id)
+    ttp = document.getElementById("total_price" + id)
+    if (n > 0)
+        qtt.innerText = parseInt(qtt.innerText) + 1
+    else if (parseInt(qtt.innerText) > 1)
+        qtt.innerText = parseInt(qtt.innerText) - 1
+    ttp.innerText = "$" + parseInt(qtt.innerText) * banh.gia
+    cart = {
+        id: id,
+        sl: parseInt(qtt.innerText)
+    }
+    sessionStorage.setItem(id, JSON.stringify(cart))
+    update_total_bill()
+}
+function update_total_bill(){
+    total_bill = 0
+    for (i = 1; i <= 8; i++) {
+        cart = JSON.parse(sessionStorage.getItem(i))
+        if (cart !== null) {
+            banh = listbanh[cart.id - 1]
+            total_bill += parseInt(cart.sl) * parseInt(banh.gia)
+        }
+    }
+    document.getElementById("total_bill").innerText = "total bill: $" + total_bill
+}
+function remove_product(id){
+    table = document.getElementById("tblcart");
+    rowToRemove = document.getElementById(id);
+    table.deleteRow(rowToRemove.rowIndex);
+    sessionStorage.setItem(id, null)
+    update_total_bill()
+}
