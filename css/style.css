@@ -142,14 +142,14 @@ section.home button {
     font-weight: bold;
     border-radius: 5px;
     border: 2px solid black;
-    opacity: .2;
+    opacity: .1;
     outline: none;
 }
 
 section.home button:hover {
     background-color: black;
     color: white;
-
+    opacity: .2;
 }
 
 section.home .btnl {
@@ -261,6 +261,7 @@ footer h3 {
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
+    line-height: 50px;
 }
 
 footer p {

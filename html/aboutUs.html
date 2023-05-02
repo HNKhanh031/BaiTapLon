@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aboutUs.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container-fluid max_width">
+        <header>
+            <a href="home.html" class="logo">
+                <img src="../img/logo.png" alt="Website Logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="#">Member</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+            <div class="icon">
+                <button type="button" onclick="downSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button type="button" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-user" aria-hidden="true"></i></button>
+                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </div>
+            <div class="form-search" id="form-search">
+                <input type="text" id="txt-search" placeholder="Search here...">
+                <button type="button" id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">USER LOGIN</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="Enter your email" id="usernameDN">
+                            <input type="password" class="form-control" placeholder="Enter your password"
+                                id="passwordDN">
+                            <button type="button" class="btn btn-primary" onclick="Dangnhap()">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--  -->
+        <section>
+            <section class="banner-product">
+                <h1 style="font-weight:bold">About Us</h1>
+            </section>
+            <section>
+                <div class="title mt-4">
+                    <h1>Delicious Cake For Everyone</h1>
+                    <p>
+                        "Delicious Cake For Everyone" Is A Statement That Highlights The
+                        Inclusivity And Widespread Appeal Of Cake As A Dessert. Cake Is A
+                        Versatile Treat That Can Be Customized In Countless Ways To Suit
+                        Different Tastes And Dietary Needs. From Decadent Chocolate Cakes To
+                        Light And Fluffy Angel Food Cakes, There's Something For Everyone To
+                        Enjoy. Furthermore, Cake Is Often Associated With Celebrations And Happy
+                        Occasions, Making It A Symbol Of Joy And Togetherness. Whether Enjoyed
+                        At A Birthday Party, Wedding, Or Simply As An After-Dinner Treat, Cake
+                        Has The Power To Bring People Together And Create Cherished Memories.
+                    </p>
+                </div>
+                <div class="product-info">
+                    <div class="box-info">
+                        <div class="border1"></div>
+                        <div class="border2"></div>
+                        <div class="border3"></div>
+                        <div class="border4"></div>
+                        <div class="shop">
+                            <i class="fa-sharp fa-solid fa-shop"></i>Shop Now
+                        </div>
+                        <div class="customer">
+                            <i class="fa-solid fa-user"></i>Loyal Customer
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutUs">
+                    <div class="img-ab">
+                        <img src="..//img/aboutUs/images1.avif" alt="" />
+                    </div>
+                    <div class="content-ab">
+                        <h1>sweety cakes</h1>
+                        <p class="pra1">
+                            Welcome to our website - the place where you can find the most
+                            delicious and diverse sweet treats! Here, you can discover a wide
+                            range of tempting and unique desserts, from cakes to breads, from
+                            French pastries to cookies, and many other types of sweets. We are
+                            committed to ensuring the quality of our products and customer
+                            satisfaction is our top priority. We provide delivery service and
+                            support our customers quickly and effectively. Explore our website and
+                            find your favorite sweet treats!
+                        </p>
+                        <h2>About Us</h2>
+                        <p class="pra2">
+                            Welcome to our cake selling website! We are a website specializing in
+                            a diverse range of sweet cakes and snacks, providing customers with
+                            amazing culinary experiences. With a team of professional and
+                            passionate chefs, we are committed to bringing customers fresh,
+                            delicious cakes with guaranteed food safety and absolute satisfaction.
+                            Our website offers fast and convenient ordering and delivery services
+                            that meet all customers' needs. In addition, we also provide
+                            custom-made cakes that allow customers to choose their own designs and
+                            decorations according to their preferences. With the desire to provide
+                            customers with the best culinary experiences, we always update and
+                            develop new products, while listening and meeting customers' needs in
+                            the best possible way. We hope to serve our customers in the coming
+                            time and bring them unforgettable culinary experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="section1">
+                    <div class="content">
+                        <h1>What do we sell?</h1>
+                        <p>
+                            For more than 25 years, <b>"Sweety cake"</b> has been making America’s
+                            favorite baked goods the old-fashioned way: from scratch, in small
+                            batches, and using the finest ingredients.
+                        </p>
+                        <a href="#">View Shop</a>
+                    </div>
+                    <div class="product">
+                        <!-- product1 -->
+                        <div class="product-box">
+                            <img src="../img/Banana Pudding Cookies_1.jpg" alt="" />
+                            <span>Cookies</span>
+                            <p>
+                                Cookies are a classic baked good that can be enjoyed in a variety of
+                                flavors and are perfect for any occasion.
+                            </p>
+                        </div>
+                        <!-- product2 -->
+                        <div class="product-box">
+                            <img src="../img/aboutUs/ClassicBananaPudding.webp" alt="" />
+                            <span>Puddings</span>
+                            <p>
+                                Puddings are a comforting and classic dessert that can be enjoyed
+                                warm or chilled and come in a variety of flavors, textures, and
+                                styles.
+                            </p>
+                        </div>
+                        <!-- product3 -->
+                        <div class="product-box">
+                            <img src="../img/Birthday Cupcakes_2.jpg" alt="" />
+                            <span>Cupcakes</span>
+                            <p>
+                                Cupcakes are a cute and delicious dessert that are perfect for
+                                individual servings and can be decorated in endless creative ways.
+                            </p>
+                        </div>
+                        <!-- product4 -->
+                        <div class="product-box">
+                            <img src="../img/aboutUs/monCake.webp" alt="" />
+                            <span>Cakes</span>
+                            <p>
+                                Cakes are a delicious dessert made from a combination of flour, sugar, eggs, and other
+                                ingredients. They come in many flavors, shapes, and sizes and are enjoyed all over the
+                                world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section2">
+                    <div class="row">
+                        <div class="team col-12">
+                            <div class="team-content col-6 float-left">
+                                <h1>Chef's Team</h1>
+                                <p>
+                                    We are a group of talented and professional chefs working together
+                                    to create the most delicious dishes and meet every customer's
+                                    demands. With years of experience in the culinary industry, our
+                                    chefs have developed a unique style that blends traditional
+                                    techniques with innovative flavor combinations. Our team is
+                                    dedicated to using only the freshest and highest quality ingredients
+                                    to create exceptional dishes. Additionally, we always listen to
+                                    customer feedback and strive to improve and enhance the quality of
+                                    our services. With the professionalism, dedication, and creativity
+                                    of our chefs, we are confident in providing customers with
+                                    unforgettable dining experiences at our restaurant.
+                                </p>
+                            </div>
+                            <div class="leader col-6 float-left">
+                                <img src="../img/Banana Pudding Cookies_2.jpg" alt="" />
+                                <h1>Advanced William</h1>
+                                <p>
+                                    Pastry Chef Advanced William is a talented and experienced expert in
+                                    pastry-making. He creates beautiful and delicious pastries with
+                                    unique flavors and designs, and is extremely detail-oriented to
+                                    ensure the quality and safety of his products.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="our-team col-12">
+                            <!-- member1 -->
+                            <div class="boxs-team col-4 float-left text-center">
+                                <img src="../img/Banana Pudding Cookies_2.jpg" alt="" />
+                                <h1 class="name">Advanced William</h1>
+                                <p class="info">
+                                    Pastry Chef Advanced William is a talented and experienced expert in
+                                    pastry-making. He creates beautiful and delicious pastries with
+                                    unique flavors and designs, and is extremely detail-oriented to
+                                    ensure the quality and safety of his products.
+                                </p>
+                            </div>
+                            <!-- member2 -->
+                            <div class="boxs-team col-4 float-left text-center">
+                                <img src="../img/Banana Pudding Cookies_2.jpg" alt="" />
+                                <h1 class="name">Advanced William</h1>
+                                <p class="info">
+                                    Pastry Chef Advanced William is a talented and experienced expert in
+                                    pastry-making. He creates beautiful and delicious pastries with
+                                    unique flavors and designs, and is extremely detail-oriented to
+                                    ensure the quality and safety of his products.
+                                </p>
+                            </div>
+                            <!-- member3 -->
+                            <div class="boxs-team col-4 float-left text-center">
+                                <img src="../img/Banana Pudding Cookies_2.jpg" alt="" />
+                                <h1 class="name">Advanced William</h1>
+                                <p class="info">
+                                    Pastry Chef Advanced William is a talented and experienced expert in
+                                    pastry-making. He creates beautiful and delicious pastries with
+                                    unique flavors and designs, and is extremely detail-oriented to
+                                    ensure the quality and safety of his products.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--  -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>About Us</h3>
+                        <p>This is a website made for learning purposes. The images and logos used in this website do
+                            not belong to us.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i class="fa fa-envelope"></i> iuh@gmail.com</li>
+                            <li><i class="fa fa-phone"></i> 0987654321</li>
+                            <li><i class="fa fa-map-marker"></i> 123 Main Street</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Follow Us</h3>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/script.js"></script>
+    <script>showSlide(0)</script>
+</body>
+
+</html>
