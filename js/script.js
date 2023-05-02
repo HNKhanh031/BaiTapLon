@@ -261,6 +261,7 @@ function checkContact() {
         return false;
     }
     else {
+        document.getElementById("ercontact").innerHTML = "*";
         return true;
     }
 }
@@ -268,6 +269,9 @@ function checkContact() {
 function Lienhe() {
     if (checkHoTen() && checkSDT() && checkEmail() && checkContact()) {
         alert("Send successful");
+    }
+    else {
+        alert("Send unsuccessful");
     }
 }
 function update_price(id, n) {
