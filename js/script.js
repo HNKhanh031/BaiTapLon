@@ -287,7 +287,7 @@ function update_price(id, n) {
     sessionStorage.setItem(id, JSON.stringify(cart))
     update_total_bill()
 }
-function update_total_bill(){
+function update_total_bill() {
     total_bill = 0
     for (i = 1; i <= 8; i++) {
         cart = JSON.parse(sessionStorage.getItem(i))
@@ -298,10 +298,30 @@ function update_total_bill(){
     }
     document.getElementById("total_bill").innerText = "total bill: $" + total_bill
 }
-function remove_product(id){
+
+function remove_product(id) {
     table = document.getElementById("tblcart");
     rowToRemove = document.getElementById(id);
     table.deleteRow(rowToRemove.rowIndex);
     sessionStorage.setItem(id, null)
     update_total_bill()
+}
+
+function buy() {
+    var cart = document.getElementById("tblcart");
+    if (cart.rows.length > 1) {
+        alert("Buy successful");
+    } else {
+        alert("Empty cart");
+    }
+}
+
+function resetCart() {
+    var table = document.getElementById("tblcart");
+    var rowCount = table.rows.length;
+    for (var i = rowCount - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+    sessionStorage.clear();
+    update_total_bill();
 }
