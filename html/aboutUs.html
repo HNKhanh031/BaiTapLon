@@ -15,12 +15,12 @@
 </head>
 
 <body>
-    <div class="container-fluid max_width">
-        <header>
+    <div class="container-fluid max_width about-us">
+        <header id="header">
             <a href="home.html" class="logo">
                 <img src="../img/logo.png" alt="Website Logo">
             </a>
-            <nav class="navbar">
+            <nav class="navbar" id="nav-bar">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="Product.html">Product</a></li>
@@ -30,6 +30,9 @@
                     <li><a href="register.html">Register</a></li>
                 </ul>
             </nav>
+            <div class="responsive" id="responsive">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="icon">
                 <button type="button" onclick="downSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
                 <button type="button" data-toggle="modal" data-target="#myModal">
@@ -281,7 +284,7 @@
         </footer>
     </div>
     <script src="../js/script.js"></script>
-    <script>showSlide(0)</script>
+
 </body>
 
 </html>

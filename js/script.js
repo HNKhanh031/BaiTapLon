@@ -329,3 +329,20 @@ function resetCart() {
     sessionStorage.clear();
     update_total_bill();
 }
+
+// responsive
+
+let nav = document.getElementById('nav-bar')
+let nav_rps = document.getElementById('responsive')
+
+nav_rps.onclick = function () {
+    let isClose = nav.style.zIndex
+    if (isClose == 0) {
+        nav.style.zIndex = 1
+        nav.style.top = '50px'
+    }
+    else {
+        nav.style.zIndex = 0
+        nav.style.top = '-500px'
+    }
+}
