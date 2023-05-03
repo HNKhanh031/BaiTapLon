@@ -936,6 +936,14 @@ form {
         padding: 0;
     }
 
+    .card {
+        margin-top: 20px !important;
+    }
+
+    .card button {
+        width: 100% !important;
+    }
+
     footer {
         position: absolute;
     }
