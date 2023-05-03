@@ -688,6 +688,36 @@ form {
         display: block;
     }
 
+    section.product {
+        width: 100% !important;
+    }
+
+    section.product-detail {
+        height: auto;
+    }
+
+    section.product-detail .content {
+        margin-left: 50px;
+    }
+
+    .about-us .box-info {
+        width: 90%;
+        margin-top: 90px;
+        margin-bottom: 50px;
+    }
+
+    .about-us .aboutUs {
+        height: auto;
+    }
+
+    .about-us .content-ab h1,
+    .about-us .content-ab h2 {
+        font-size: 30px;
+    }
+
+    .about-us .section1 .content {
+        line-height: 2;
+    }
     
 }
 
