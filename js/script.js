@@ -215,7 +215,7 @@ function checkSDT() {
 }
 
 function checkEmail() {
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("emailDK").value;
     if (email == "") {
         document.getElementById("eremail").innerHTML = "Email must not be empty";
         return false;
@@ -233,24 +233,24 @@ function checkEmail() {
 
 function Dangky() {
     if (checkTenDN() && checkMatKhau() && checkMatKhauRe() && checkHoTen() && checkNgaySinh() && checkSDT() && checkEmail()) {
-        let tenDN = document.getElementById("username").value;
+        let email = document.getElementById("emailDK").value;
         let mk = document.getElementById("password").value;
-        localStorage.setItem('username', tenDN);
+        localStorage.setItem('emailDK', email);
         localStorage.setItem('password', mk);
-        alert("Register successful. Username: " + tenDN + " Password: " + mk);
+        alert("Register successful. Email: " + email + " Password: " + mk);
     }
 }
 
 function Dangnhap() {
-    let tenDN = document.getElementById("usernameDN").value;
-    let mk = document.getElementById("passwordDN").value;
-    let storedUsername = localStorage.getItem('username');
+    let email = document.getElementById("emailDN").value;
+    let mk = document.getElementById("passDN").value;
+    let storedEmail = localStorage.getItem('emailDK');
     let storedPassword = localStorage.getItem('password');
-    if (tenDN === storedUsername && mk === storedPassword) {
+    if (email === storedEmail && mk === storedPassword) {
         alert("Login successful");
         $("#myModal").modal("hide");
     } else {
-        alert("Invalid username or password");
+        alert("Invalid email or password");
     }
 }
 

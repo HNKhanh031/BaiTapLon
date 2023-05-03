@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,82 +11,95 @@
     <script src="../js/jquery-3.6.4.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    :root {
-        --primary-color:#f2726a;
-    }
-    article{
-        display: flex; 
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color:white;
-   }
-    .card {
-        background: #e6e38cd2;
-      
-        border-radius: 10px;
-       text-align: center;
-       overflow: hidden; 
-        margin: 0 20px;
-    }
-    img{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        object-position: center;
-    }
-    .card_img {
-        width: 120px;
-        height: 120px;
-        border: 4px solid var(--primary-color);
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 0 auto;
-        transform: translateY(25px);
-        transition: 0.5s;
-    }
-    .card h2{
-        margin-top: 35px;
-    }
-    .card p{
-        color: var(--primary-color);
-    }
-    .card_social{
-        margin: 25px 0;
-    }
-    .card_social a{
-        color: white;
-        margin: 25px 20px;
-        font-size: 20px;
-    }
-    .card_social a:hover{
-        color: #f2726a;
-    }
-    .card button{
-        width: 100px;
-        height: 40px;
-        border: 1px solid var(--primary-color);
-        background-color: transparent;
-        color: white;
-        border-radius: 10px;
-        transition: 0.5s;
-    }
-    .card button:hover{
-        background: #f2726a;
-  
-    }
-    .card_img:hover{
-        width: 100%;
-        height: 100%;
-        border-radius: unset;
-        transform: unset;
-        border: none;
-    }
-</style>
+    <style>
+        :root {
+            --primary-color: #f2726a;
+        }
+
+        article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .card {
+            background: #e6e38cd2;
+
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            margin: 0 20px;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+        }
+
+        .card_img {
+            width: 120px;
+            height: 120px;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            transform: translateY(25px);
+            transition: 0.5s;
+        }
+
+        .card h2 {
+            margin-top: 35px;
+        }
+
+        .card p {
+            color: var(--primary-color);
+        }
+
+        .card_social {
+            margin: 25px 0;
+        }
+
+        .card_social a {
+            color: white;
+            margin: 25px 20px;
+            font-size: 20px;
+        }
+
+        .card_social a:hover {
+            color: #f2726a;
+        }
+
+        .card button {
+            width: 100px;
+            height: 40px;
+            border: 1px solid var(--primary-color);
+            background-color: transparent;
+            color: white;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .card button:hover {
+            background: #f2726a;
+
+        }
+
+        .card_img:hover {
+            width: 100%;
+            height: 100%;
+            border-radius: unset;
+            transform: unset;
+            border: none;
+        }
+    </style>
 </head>
+
 <body>
- 
+
     <div class="container-fluid max_width">
         <header>
             <a href="home.html" class="logo">
@@ -114,109 +128,135 @@
             <div class="modal" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">USER LOGIN</h4>
+                            <h3 class="modal-title">Login</h3>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form action="">
-                            <input type="text" class="form-control" placeholder="Enter your email" id="usernameDN">
-                            <input type="password" class="form-control" placeholder="Enter your password"
-                                id="passwordDN">
-                            <button type="button" class="btn btn-primary" onclick="Dangnhap()">Login</button>
-                        </form>
+                        <div class="modal-body">
+                            <form action="" class="form">
+                                <div class="form-group text-center col-12">
+                                    <input class="form-control col-10 d-inline-block" type="email" name="email"
+                                        id="emailDN" placeholder="Email">
+                                    <div class="icon d-inline-block pl-2">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center col-12">
+                                    <input class="form-control col-10 d-inline-block" type="password" name="pass"
+                                        id="passDN" placeholder="Password">
+                                    <div class="icon d-inline-block pl-2">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex justify-content-around">
+                                    <label for="" class="form-check-label">
+                                        <input class="form-check d-inline" type="checkbox" name="rememberMe"
+                                            id="rememberMe">
+                                        Remember me
+                                    </label>
+                                    <label for="">
+                                        <a href="#">Forgot password?</a>
+                                    </label>
+                                </div>
+                                <div class="form-group text-center col-12">
+                                    <button type="submit" class="btn btn-success" onclick="Dangnhap()">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>Don't have an account? <a href="register.html">Register</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
-        
+
         <section class="banner-product">
             <h1 style="font-weight: bold">Member</h1>
         </section>
-       <!--  -->
-       <article>
-        <div class="container-fluid">
-            <div class="row">
-            <div class="col-sm-3">  
-            <div class="card">
-             <div class="card_img">
-                <img src="../img/anhthi.jpg" alt="">
-             </div>
-             <h2>Hồ Văn Thi</h2>
-             <p>21006731</p>
-             <div class="card_social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-             </div>
-             <button>Contact me</button>
-            </div>
-        </div>
-        
-      
-       
         <!--  -->
-          <!--  -->
-      
-       
-            
-                <div class="col-sm-3"> 
-            <div class="card">
-             <div class="card_img">
-                <img src="../img/anhkhanh.jpg" alt="">
-             </div>
-             <h2>Hoàng Nhân Khánh</h2>
-             <p>21125931</p>
-             <div class="card_social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-             </div>
-             <button>Contact me</button>
+        <article>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card_img">
+                                <img src="../img/anhthi.jpg" alt="">
+                            </div>
+                            <h2>Hồ Văn Thi</h2>
+                            <p>21006731</p>
+                            <div class="card_social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                            <button>Contact me</button>
+                        </div>
+                    </div>
+
+
+
+                    <!--  -->
+                    <!--  -->
+
+
+
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card_img">
+                                <img src="../img/anhkhanh.jpg" alt="">
+                            </div>
+                            <h2>Hoàng Nhân Khánh</h2>
+                            <p>21125931</p>
+                            <div class="card_social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                            <button>Contact me</button>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card_img">
+                                <img src="../img/anhtien.jpg" alt="">
+                            </div>
+                            <h2>Trần Trung Tiến</h2>
+                            <p>21001861</p>
+                            <div class="card_social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                            <button>Contact me</button>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card_img">
+                                <img src="../img/anhkiet.jpg" alt="">
+                            </div>
+                            <h2>Phạm Lê Tuấn Kiệt</h2>
+                            <p>21139091</p>
+                            <div class="card_social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                            <button>Contact me</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    
-        <!--  -->
-        <div class="col-sm-3"> 
-            <div class="card">
-             <div class="card_img">
-                <img src="../img/anhtien.jpg" alt="">
-             </div>
-             <h2>Trần Trung Tiến</h2>
-             <p>21001861</p>
-             <div class="card_social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-             </div>
-             <button>Contact me</button>
-            </div>
-        </div>
-    
-          <!--  -->
-          <div class="col-sm-3"> 
-            <div class="card">
-             <div class="card_img">
-                <img src="../img/anhkiet.jpg" alt="" >
-             </div>
-             <h2>Phạm Lê Tuấn Kiệt</h2>
-             <p>21139091</p>
-             <div class="card_social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-             </div>
-             <button>Contact me</button>
-            </div>
-        </div>
-            </div>
-        </div>
-       </article>
-       
+        </article>
+
         <!--  -->
         <footer>
             <div class="container">
@@ -250,4 +290,5 @@
     <script src="../js/script.js"></script>
 
 </body>
+
 </html>
