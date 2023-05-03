@@ -942,6 +942,7 @@ form {
 
     .card button {
         width: 100% !important;
+        transform: unset !important;
     }
 
     footer {
