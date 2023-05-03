@@ -1,3 +1,12 @@
+.max_width {
+  width: 100% !important;
+}
+
+.ptb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 /* title */
 .title {
     width: 100%;
@@ -96,7 +105,7 @@
     height: 650px;
     margin-top: 50px;
     display: flex;
-    position: relative;
+    /* position: absolute; */
   }
   .img-ab {
     width: 50%;
@@ -131,14 +140,8 @@
     border-left: 3px solid #210707;
     border-bottom: 3px solid #210707;
     padding-left: 10px;
-    /* text-align: center;
-    background: right / 0% 10% no-repeat linear-gradient(#fdafbd, #f3d0d6);
-    transition: background-size 400ms; */
   }
-  /* .content-ab h1:hover {
-    background: left / 100% 100% no-repeat linear-gradient(#fdafbd, #f3d0d6);
-    color: #fff;
-  } */
+
   .content-ab h2 {
     width: 100%;
     font-size: 40px;
@@ -147,6 +150,7 @@
     border-left: 3px solid #210707;
     border-bottom: 3px solid #210707;
     padding-left: 10px;
+    padding-bottom: .8rem;
   }
   
   .pra1 {
@@ -160,11 +164,13 @@
   /* section1 */
   .section1 {
     width: 100%;
-    height: 600px;
+    height: 50rem;
   }
   .section1 .content {
     text-align: center;
     line-height: 50px;
+    width: 100%;
+    height: auto;
   }
   .section1 .content h1 {
     text-align: center;
@@ -180,15 +186,15 @@
     color: #210707;
     border-bottom: 3px solid #210707;
   }
-  .product {
+  .products {
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 500px;
     justify-content: center;
   }
   .product-box {
     width: 20%;
-    height: 400px;
+    /* height: 400px; */
     padding: 0 10px;
     text-align: center;
   }
@@ -208,24 +214,24 @@
   }
   .section2 {
     width: 100%;
-    height: 800px;
+    /* height: 800px; */
     display: flex;
     flex-direction: column;
   }
   .team {
     width: 100%;
-    height: 350px;
+    height: auto;
   }
   .team-content {
     width: 50%;
-    height: 350px;
+    /* height: 350px; */
     left: 5%;
   }
   .team-content p {
     width: 75%;
     padding: 10px 20px;
     background-color: rgba(33, 7, 7, 0.6);
-    z-index: -1;
+    /* z-index: -1; */
     margin-top: 10px;
   }
   .team-content > h1 {
@@ -256,16 +262,15 @@
   }
   .our-team {
     width: 100%;
-    height: 350px;
+    /* height: 350px; */
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    padding-left: 20px;
   }
   .boxs-team {
-    width: 25%;
     text-align: center;
-    padding: 0 10px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
   }
   .boxs-team img {
     width: 200px;
@@ -281,6 +286,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
   

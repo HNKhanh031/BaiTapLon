@@ -509,7 +509,60 @@ section.shoppingcart button.close {
     right: 5px;
     color: red;
 }
+/* modal start */
 
+#myModal .modal-content {
+    margin-top: 5rem;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+}
+
+.modal-content .modal-title {
+    margin-left: 41%;
+}
+
+#myModal .modal-body {
+    width: 100%;
+}
+
+.modal-body .form input {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: .5rem 2rem;
+    border-radius: 30px;
+    padding: 1.1rem;
+    text-transform: none;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.modal-body .icon {
+    font-size: 1.2rem;
+    right: 4rem;
+}
+
+.modal-body label {
+    font-size: 1rem;
+}
+
+.modal-footer p {
+    font-size: 1rem !important;
+}
+
+.modal-body button {
+    width: 90%;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.modal-footer {
+    font-size: 1.3rem;
+}
+
+/* modal end */
+/* 
 .modal {
     display: none;
     position: fixed;
@@ -521,8 +574,8 @@ section.shoppingcart button.close {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-}
-
+} */
+/* 
 .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -574,7 +627,7 @@ form {
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
-}
+} */
 
 #shoppingcart {
     position: relative;
@@ -595,6 +648,9 @@ form {
     right: 10px;
 }
 
+.about-us .section1 a:hover {
+    text-decoration: none;
+}
 
 /* Respinsive start */
 
@@ -752,61 +808,136 @@ form {
         display: none;
     }
 
-    .about-us .title h1 {
-        height: auto;
-        padding: 10px;
+    .about-us h1 {
+        font-size: 200%;
     }
 
+    .about-us .title {
+        height: auto;
+    }
     .about-us .title p {
-        text-align: center;
-        padding: 0 20px;
+        padding: 0 1rem;
+        text-align: justify;
     }
 
     .about-us .product-info {
-        top: 150px;
+        padding-top: 2rem;
     }
 
     .about-us .product-info .box-info {
-        margin: 20px 0;
-        width: 100%;
+        width: 90%;
     }
 
-    .box-info .shop {
+    .about-us .box-info .shop {
+        margin-right: 0;
+        padding-left: 1.5rem;
+    }
+    
+    .about-us .box-info .shop, 
+    .about-us .box-info .customer {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        padding-left: 30px;
     }
 
-    .box-info .customer {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-left: 0 !important;
+    .about-us .box-info .shop i, 
+    .about-us .box-info .customer i {
+        padding-right: 5px;
     }
 
     .about-us .aboutUs {
+        margin-top: 0;
+        height: auto;
         display: flex;
-        flex-direction: column !important;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .about-us .aboutUs .content-ab {
+        width: 100% !important;
+        min-width: 90%;
+    }
+
+    .about-us .aboutUs .content-ab h1,
+    .about-us .aboutUs .content-ab h2 {
+        font-size: 20px;
+    }
+
+    .about-us .section1 {
         height: auto;
-        margin-top: 150px;
     }
 
-    .aboutUs .img-ab {
-        position: unset;
-        margin-bottom: 50px;
+    .about-us .section1 .content {
+        line-height: 1.5;
     }
 
-    .aboutUs .content-ab {
-        position: unset;
-        width: 100%;
-        padding: 20px;
+    .about-us .section1 .products {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
     }
 
-    .about-us .section1 .content p {
+    .about-us .section1 .products .product-box {
+        min-width: 90%;
+    }
+    
+    .about-us .team {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 
+    .about-us .team .team-content {
+        min-width: 90%;
+        left: 0;
+    }
+
+    .about-us .team .team-content p,
+    .about-us .team .team-content h1 {
+        min-width: 100%;
+    }
+
+    .about-us .team .leader {
+        min-width: 100%;
+        text-align: center;
+        right: 0;
+        padding: 0;
+    }
+
+    .about-us .team .leader p,
+    .about-us .boxs-team p {
+        padding-left: 30px;
+        text-align: center;
+        min-width: 100%;
+    }
+
+    .about-us .team .leader img {
+        padding-bottom: 1.5rem;
+    }
+
+    .about-us .our-team {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us .boxs-team {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        text-align: center;
+        right: 0;
+        padding: 0;
+    }
+
+    footer {
+        position: absolute;
     }
 
     footer h3 {

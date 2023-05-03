@@ -62,21 +62,46 @@
             <div class="modal" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
-
-                        <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title">USER LOGIN</h4>
+                            <h3 class="modal-title">Login</h3>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form action="">
-                            <input type="text" class="form-control" placeholder="Enter your email" id="usernameDN">
-                            <input type="password" class="form-control" placeholder="Enter your password"
-                                id="passwordDN">
-                            <button type="button" class="btn btn-primary" onclick="Dangnhap()">Login</button>
-                        </form>
+                        <div class="modal-body">
+                            <form action="" class="form">
+                                <div class="form-group text-center col-12">
+                                    <input class="form-control col-10 d-inline-block" type="email" name="email"
+                                        id="email" placeholder="Email">
+                                    <div class="icon d-inline-block pl-2">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center col-12">
+                                    <input class="form-control col-10 d-inline-block" type="password" name="pass"
+                                        id="pass" placeholder="Password">
+                                    <div class="icon d-inline-block pl-2">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group d-flex justify-content-around">
+                                    <label for="" class="form-check-label">
+                                        <input class="form-check d-inline" type="checkbox" name="rememberMe"
+                                            id="rememberMe">
+                                        Remember me
+                                    </label>
+                                    <label for="">
+                                        <a href="#">Forgot password?</a>
+                                    </label>
+                                </div>
+                                <div class="form-group text-center col-12">
+                                    <button type="submit" class="btn btn-success login-bt">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>Don't have an account? <a href="register.html">Register</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
         <section class="shoppingcart" id="shoppingcart">
             <table id="tblcart" class="tblcart table table-bordered table-hover">
@@ -122,7 +147,7 @@
         </footer>
     </div>
     <script src="../js/script.js"></script>
-    
+
 </body>
 
 </html>
