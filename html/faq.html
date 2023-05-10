@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
@@ -90,85 +90,60 @@
 
         <section>
             <section class="banner-product">
-                <h1 style="font-weight:bold">Register</h1>
+                <h1 style="font-weight:bold">Frequently Asked Questions</h1>
             </section>
-            <form class="col-12">
-                <div class="form-group row frm-title">
-                    <h3 class="col-12 text-left text-info pt-3 frm-title" style="font-weight: bold">Register Infomations
-                    </h3>
-                </div>
 
-                <div class="form-group row">
-                    <label for="username" class="col-sm-4 col-form-label">Username:</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="username" placeholder="Username"
-                            onblur="checkTenDN()">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mt-4 text-info" style="font-weight: bold">Ordering Process</h2>
+                        <h4 class="mt-4">How can I place an order?</h4>
+                        <p>You can place an order by visiting our online order form and selecting your desired cake,
+                            size, flavors, and any customization options. Once you submit the form, we will contact you
+                            to confirm the details and arrange for payment.</p>
+                        <h4 class="mt-4">How much in advance should I place my order?</h4>
+                        <p>We recommend placing your order at least 48 hours in advance to ensure availability. However,
+                            for custom or large orders, it's best to contact us as early as possible to secure your
+                            desired date.</p>
                     </div>
-                    <span id='ertendn' class="text-danger">*</span>
-                </div>
-
-                <div class="form-group row">
-                    <label for="password" class="col-sm-4 col-form-label">Password:</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="password" placeholder="Password"
-                            onblur="checkMatKhau()">
+                    <div class="col-lg-6">
+                        <h2 class="mt-4 text-info" style="font-weight: bold">Delivery and Pickup</h2>
+                        <h4 class="mt-4">Do you offer delivery?</h4>
+                        <p>Yes, we offer delivery within Ho Chi Minh city. Delivery charges may apply based on the
+                            distance. During the checkout process, you can specify your preferred delivery date and
+                            time.</p>
+                        <h4 class="mt-4">Can I pick up my order?</h4>
+                        <p>Certainly! We provide a pickup option at our bakery location. You can select the pickup
+                            option during the ordering process, and we'll coordinate the pickup time with you.</p>
                     </div>
-                    <span id='ermk' class="text-danger">*</span>
                 </div>
-
-                <div class="form-group row">
-                    <label for="password-confirm" class="col-sm-4 col-form-label">Confirm Password:</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="password-confirm" placeholder="Confirm Password"
-                            onblur="checkMatKhauRe()">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mt-4 text-info" style="font-weight: bold">Payment and Pricing</h2>
+                        <h4 class="mt-4">What payment methods do you accept?</h4>
+                        <p>We accept payment via credit card, debit card, and cash on delivery. All payments are
+                            processed securely.</p>
+                        <h4 class="mt-4">Are your prices inclusive of taxes?</h4>
+                        <p>Yes, our prices are inclusive of all applicable taxes. There are no hidden charges.</p>
                     </div>
-                    <span id='ermkre' class="text-danger">*</span>
-                </div>
-
-                <div class="form-group row">
-                    <h3 class="col-12 text-left text-info" style="font-weight: bold">Personal Infomations</h3>
-                </div>
-
-                <div class="form-group row">
-                    <label for="fullname" class="col-sm-4 col-form-label">Full Name:</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="fullname" placeholder="Full Name"
-                            onblur="checkHoTen()">
+                    <div class="col-lg-6">
+                        <h2 class="mt-4 text-info" style="font-weight: bold">Customization and Special Requests</h2>
+                        <h4 class="mt-4">Can I customize the cake design?</h4>
+                        <p>Yes, we offer customization options for certain cake designs. Please mention your specific
+                            requirements in the order form, and we will do our best to accommodate your request.</p>
+                        <h4 class="mt-4">Can you accommodate dietary restrictions or allergies?</h4>
+                        <p>We strive to accommodate dietary restrictions and allergies. Please mention any special
+                            dietary requirements or allergies in the order form, and we will advise you on the available
+                            options.</p>
                     </div>
-                    <span id='erhoten' class="text-danger">*</span>
                 </div>
-
-                <div class="form-group row">
-                    <label for="birthdate" class="col-sm-4 col-form-label">Date of birth:</label>
-                    <div class="col-sm-5">
-                        <input type="date" class="form-control" id="birthdate" onblur="checkNgaySinh()">
+                <div class="row">
+                    <div class="col-12">
+                        <p>If you have any other questions or need further assistance, please don't hesitate to <a
+                                href="contact.html">contact us</a>. We're here to help!</p>
                     </div>
-                    <span id='erbirthdate' class="text-danger">*</span>
                 </div>
-
-                <div class="form-group row">
-                    <label for="phone" class="col-sm-4 col-form-label">Phone Numbers:</label>
-                    <div class="col-sm-5">
-                        <input type="tel" class="form-control" id="phone" placeholder="Phone Numbers"
-                            onblur="checkSDT()">
-                    </div>
-                    <span id='ersdt' class="text-danger">*</span>
-                </div>
-
-
-                <div class="form-group row">
-                    <label for="email" class="col-sm-4 col-form-label">Email:</label>
-                    <div class="col-sm-5">
-                        <input type="email" class="form-control" id="emailDK" placeholder="Email" onblur="checkEmail()">
-                    </div>
-                    <span id='eremail' class="text-danger">*</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                    <input type="button" class="btn btn-primary mr-1" onclick="Dangky()" value="Register">
-                    <button type="reset" class="btn btn-primary mr-auto">Cancel</button>
-                </div>
-            </form>
-
+            </div>
         </section>
         <footer>
             <div class="container">
