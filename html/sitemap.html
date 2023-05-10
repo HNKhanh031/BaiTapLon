@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product-detail</title>
+    <title>Sitemap</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        $(document).ready(function () {
-            listbanh = JSON.parse(sessionStorage.getItem('listbanh'));
-            banh = listbanh.find(banh => banh.id == sessionStorage.getItem("id"))
-            document.getElementById("ten").innerHTML += banh.ten;
-            banh.hinh.forEach(Element => {
-                let b = "<div class='slide'><img src='" + Element + "' ></div>"
-                $(".slider").append(b);
-            });
-            document.getElementById("mota").innerHTML += banh.mota;
-            document.getElementById("gia").innerHTML += "$" + banh.gia;
-            showSlide(0);
-        });
-    </script>
 </head>
-
 <body>
     <div class="container-fluid max_width">
         <header id="header">
@@ -70,14 +53,14 @@
                             <form action="" class="form">
                                 <div class="form-group text-center col-12">
                                     <input class="form-control col-10 d-inline-block" type="email" name="email"
-                                        id="email" placeholder="Email">
+                                        id="emailDN" placeholder="Email">
                                     <div class="icon d-inline-block pl-2">
                                         <i class="fa-solid fa-envelope"></i>
                                     </div>
                                 </div>
                                 <div class="form-group text-center col-12">
                                     <input class="form-control col-10 d-inline-block" type="password" name="pass"
-                                        id="pass" placeholder="Password">
+                                        id="passDN" placeholder="Password">
                                     <div class="icon d-inline-block pl-2">
                                         <i class="fa-solid fa-lock"></i>
                                     </div>
@@ -104,30 +87,10 @@
                 </div>
         </header>
         <section class="banner-product">
-            <h1 style="font-weight: bold">Product Details</h1>
+            <h1 style="font-weight: bold">Sitemap</h1>
         </section>
-        <section class="product-detail container">
-            <div class="slider">
-                <button id="prev" class="btnl" onclick="prev()"><i class="fa fa-angle-left"
-                        aria-hidden="true"></i></button>
-                <button id="next" class="btnr" onclick="next()"><i class="fa fa-angle-right"
-                        aria-hidden="true"></i></button>
-            </div>
-            <div class="content">
-                <h1 id="ten"></h1>
-                <h3 id="gia"></h3>
-                <p id="mota"></p>
-                <div class="btn_qtt">
-                    <div class="qtt">
-                        <button class="plus" onclick="plus()">+</button>
-                        <p id="quantity">1</p>
-                        <button class="minus" onclick="minus()">-</button>
-                    </div>
-                    <button class="addbanh" onclick="themsl(sessionStorage.getItem('id')); alert('Add successful')">Add
-                        to cart</button>
-                </div>
-            </div>
-
+        <section class="sitemap">
+            <img src="../img/Sitemap.png" alt="">
         </section>
         <footer>
             <div class="container">
@@ -159,7 +122,5 @@
         </footer>
     </div>
     <script src="../js/script.js"></script>
-
 </body>
-
 </html>
