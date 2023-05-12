@@ -242,8 +242,8 @@ function Dangky() {
 }
 
 function Dangnhap() {
-    let email = document.getElementById("emailDN").value;
-    let mk = document.getElementById("passDN").value;
+    let email = document.getElementById("email").value;
+    let mk = document.getElementById("pass").value;
     let storedEmail = localStorage.getItem('emailDK');
     let storedPassword = localStorage.getItem('password');
     if (email === storedEmail && mk === storedPassword) {
